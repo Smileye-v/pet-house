@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    text-align: center;
+}
+
+#container {
+    max-width: 650px;
+    min-width: 420px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    background-color: #eee;
+}
+
+.clearfix :after {
+    content: '';
+    clear: both;
+    display: block;
+    visibility: hidden;
+}
+
+p1{
+    color: #843900;
+    position: relative;
+    display: inline-block;
+    top: -34px;
+    font-size: 32px;
+}
+
+.has_number {
+    position: relative;
+    left: 533px;
+    top: -20px;
+
+}
+
+.reg_l {
+    width: 600px;
+    padding: 40px 0 0 50px;
+}
+
+.left {
+    display: inline;
+    float: left;
+    margin-top: 200px;
+}
+
+.left1 {
+    position: relative;
+    width: 80%;
+    left: -130px;
+    top: -35px;
+}
+
+.right {
+    display: inline;
+    float: right;
+}
+
+.login_content {
+    background: #f3f3f3;
+}
+.footer_bot {
+    padding: 20px 0;
+    position: relative;
+}
+.footer_auto {
+    width: 990px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.form-item-center {
+    width: 50%;
+    display: inline-block;
+    height: 50px;
+    margin-top: 20px;
+    text-align: left;
+    text-indent: 10px;
+}
+
+.zc {
+    width:50%;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    background-color: #f7a256;
+    color: white;
+    border: 0;
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header {
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    background-color: rgba(133, 139, 141, 0.65);
+}
+
+.form-item {
+    width:35%;
+    display: inline-block;
+    height: 50px;
+    margin-top: 20px;
+    text-align: left;
+    text-indent: 10px;
+}
+
+#qw {
+    width: 15%;
+    display: inline-block;
+    height: 50px;
+    margin-top: 20px;
+    text-align: center;
+    text-decoration: none;
+    background-color: rgba(145, 153, 155, 0.52);
+    vertical-align: top;
+    line-height: 50px;
+    color: #f7a256;
+}
+
+.ed {
+    width: 15%;
+    display: inline-block;
+    height: 50px;
+    margin-top: 20px;
+    text-align: center;
+    text-decoration: none;
+    background-color: rgba(145, 153, 155, 0.52);
+    vertical-align: top;
+    line-height: 50px;
+    color: #7c7c7c;
+}
+
+.color {
+    color: #f7a256;
+}
+
+.p {
+    width:50%;
+    text-align: left;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+#img {
+    background: url("Pet House/img/yan3.png") no-repeat right center;
+    display: inline-block;
+    background-color: white;
+}
+
+.form {
+    width: 35%;
+    display: inline-block;
+    height: 50px;
+    margin-top: 20px;
+    text-align: left;
+    text-indent: 10px;
+    white-space: nowrap;
+}
+
+.center {
+    width: 35%;
+    display: inline-block;
+    height: 50px;
+    margin-top: 20px;
+    text-align: left;
+    text-indent: 10px;
+}
+
+input {
+    outline: 1px;
+    outline-color: #cad2d4;
+    outline-style: solid;
+    border: 1px;
+    border-style: none;
+    text-shadow: none;
+    -webkit-appearance: none;
+    -webkit-user-select: text;
+    box-shadow: none;
+}
+
+.img {
+    width: 30%;
+    height: 50px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+canvas {
+    width: 15%;
+    background-color: white;
+    height: 50px;
+    vertical-align: middle;
+    display: inline-block;
+    border-color: white;
+    position: relative;
+    top: -1px;
+}
+
+#tips {
+    width: 80%;
+    color: red;
+    text-align: left;
+    display: inline-block;
+}
+
+.qwe {
+    display: inline-block;
+    left: 20px;
+    width:60%;
+    height: 400px;
+    background-color: white;
+    position: relative;
+    top:-400px;
+    bottom: 400px;
+}
+.box{
+    position: relative;
+    width: 100%;
+    height: 500px;
+    top:40px;
+    background-color: #333;
+    display: inline-block;
+    overflow:hidden;
+}
+.box1{
+    position:relative;
+    width: 50%;
+    height:350px ;
+    display:inline-block;
+    background-color: white;
+}

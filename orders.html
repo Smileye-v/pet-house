@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>我的订单</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<!--导航栏-->
+<!--小-->
+<div style="background-color:#f5f5f5;">
+    <div class="container" style="height: 30px;display: flex;justify-content: space-between">
+        <!--左边-->
+        <div style="width: 40%;display: flex;justify-content: flex-start">
+            <ul class="nav nav-tabs" style=" height: 30px;">
+                <li><a href="home.html"
+                       style="font-size: 13px;color: #843900;display: flex;align-items: center;height: 30px;border: 0;">Pet
+                        House首页 </a></li>
+                <li><a href="login.html" style="font-size: 13px;color: #843900;display: flex;align-items: center;height: 30px;border: 0;margin-left: 15px;margin-right:-10px">请登录/</a></li>
+                <li><a href="login.html" style="font-size: 13px;color: #843900;display: flex;align-items: center;height: 30px;border: 0;margin-left: -15px">注册</a></li>
+                </ul>
+                </div>
+                <!--右边-->
+                <div style="width: 60%;display: flex;justify-content: flex-end">
+                    <ul class="nav nav-tabs" style="height: 30px;display: flex;align-items: center;font-size: 13px;">
+                        <li><a href="orders.html"
+                               style="color: #843900;height: 30px;border: 0;display: flex;align-items: center;">我的订单</a></li>
+                        <li><a href="buy.html" style="color: #843900;height: 30px;border: 0;display: flex;align-items: center;"><img
+                                        src="img/source_picture/购物车2.png"
+                                        style="width: 15px;height: 15px;display: flex;align-items: center;margin-right: 5px">购物车</a>
+                        </li>
+                        <li><a href="personal.html"
+                               style="color: #843900;height: 30px;border: 0;display: flex;align-items: center;">个人中心</a></li>
+                        <li><a href="#"
+                               style="color: #843900;height: 30px;border: 0;display: flex;align-items: center;">问题反馈</a></li>
+                    </ul>
+                
+
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <nav class="navbar navbar-default " role="navigation"
+         style="border: 0 ;margin-top: 20px">
+        <!--logo-->
+        <div class="navbar-header" style="display: flex;justify-content:flex-start;background-color:white"><a href="#"
+                                                                                                              style="display: flex">
+                <div style="background: url('img/source_picture/petlogo.png') no-repeat;background-size: 100%;width: 192px;height:64px;"></div>
+            </a>
+        </div>
+        <ul class="nav navbar-nav navbar-left"
+            style="font-size: 25px; display: flex;align-items: center;height: 64px;margin-left: 18px">
+            <li style="color:#843900"> 我的订单</li>
+        </ul>
+
+    </nav>
+    <ul id="myTab" class="nav nav-tabs" style="margin-top: 40px">
+        <li class="active" style="width: 120px;text-align: center;"><a href="#all" data-toggle="tab">全部订单</a></li>
+        <li style="width: 120px;text-align: center"><a href="#paying" data-toggle="tab">待付款</a></li>
+        <li style="width: 120px;text-align: center"><a href="#deliver" data-toggle="tab">待发货</a></li>
+        <li style="width: 120px;text-align: center"><a href="#harvest" data-toggle="tab">待收货</a></li>
+        <li style="width: 120px;text-align: center"><a href="#eveljueit" data-toggle="tab">待评价</a></li>
+        <!--搜索-->
+        <div class="navbar-right col-md-5"
+             style="display: flex;align-items: center;justify-content: flex-end;">
+            <div class="input-group" style="width: 80%;">
+                <input type="text" class="form-control" placeholder="点击输入搜索宝贝" style="width: 100%;">
+                <span class="input-group-btn">
+               <button class="btn btn-search" style="background-color: #843900;color: #ffffff">查找</button>
+            </span>
+            </div>
+        </div>
+    </ul>
+    <div id="myTabContent" class="tab-content">
+        <div class="tab-pane fade in active" id="all">
+            <table class="table" style="text-align: center;margin-top: 30px ;font-size: 13px">
+                <thead>
+                <tr style="font-size: 16px">
+                    <th style="color: #843900;text-align: center;width: 360px">宝贝</th>
+                    <th style="color: #843900;text-align: center;">单价</th>
+                    <th style="color: #843900;width: 80px;text-align: center;">数量</th>
+                    <th  style="color: #843900;text-align: center;">商品操作</th>
+                    <th  style="color: #843900;text-align: center;">实付款</th>
+                    <th  style="color: #843900;text-align: center;">交易状态</th>
+                    <th  style="color: #843900;text-align: center;">交易操作</th>
+                </tr>
+                </thead>
+                <tbody >
+                
+                <tr style="background-color: #eaeaea"><td colspan="6" style="text-align: left;padding-left: 20px">
+                        <span>日期：orderDate</span>
+                        <span style="margin-left: 20px">订单号：orderNumber</span></td>
+                    <td>
+                        <form method="post" action="controller/delUser_order.html">
+                            <input type="hidden" name="orderId" value="orderId'">
+                        <button type="submit" style="border: none;border-radius:5px; ">【删除】</button>
+                    </form></td>
+                </tr>
+                <tr>
+                    <td>
+                         <img src="img/orders/food.jpg" style="width: 100px;height: 100px;">
+                        <div style="width:230px;height:100px;text-align:left;float: right">
+                            <p>【狂欢价】orderPro[交易快照]</p>
+                            <p style="color: #858585">分类：type</p>
+                        </div>
+                    </td>
+                    <td style="line-height:100px;">￥0</td>
+                    <td style="line-height:100px;">number</td>
+                    <td><p style="margin-top: 30px">退款/退换货</p><p><a href="#" style="color: #843900">联系客服</a></p></td>
+                    <td style="line-height:100px;">￥0（含运费）</td>
+                    <td style="line-height:100px;">交易成功</td>
+                    <td style="line-height:100px;"><a href="#" style="color: #843900">追加评论</a></td>
+                </tr>
+                <?html } ?>
+                </tbody>
+            </table>
+            <div style="text-align: center;margin-top: 20px"><img style="width: 40px;margin-left: 10px" src="img/source_picture/购物车2.png">空空如也~</div>
+
+        </div>
+        <div class="tab-pane fade" id="paying"><p style="text-align: center;line-height: 300px">暂无订单消息，去逛逛<a
+                        style="color: #843900" href="home.html">Pet House首页</a>吧</p></div>
+        <div class="tab-pane fade" id="deliver"><p style="text-align: center;line-height: 300px">暂无订单消息，去逛逛<a
+                        style="color: #843900" href="home.html">Pet House首页</a>吧</p></div>
+        <div class="tab-pane fade" id="harvest"><p style="text-align: center;line-height: 300px">暂无订单消息，去逛逛<a
+                        style="color: #843900" href="home.html">Pet House首页</a>吧</p></div>
+        <div class="tab-pane fade" id="eveljueit"><p style="text-align: center;line-height: 300px">暂无订单消息，去逛逛<a
+                        style="color: #843900" href="home.html">Pet House首页</a>吧</p></div>
+    </div>
+</div>
+<!--页脚-->
+<div style=" background-color:#3f3f3f;height:300px;margin-top:200px;display: flex;align-items: center;justify-content: space-between;position: absolute;width: 100%">
+    <div style="width:100%;height:1px;background-color:#C0C0C0;position: absolute;bottom: 20px;"></div>
+    <div class="container" style="display: flex;flex-direction: row;flex-wrap:wrap;margin-bottom:20px">
+        <div style="width: 33%;text-align: center">
+            <img src="img/source_picture/保障.png" style="width:20px;height: 20px;">
+            <span style="color: #ffffff;font-size: 20px">消费者保障</span>
+        </div>
+        <div style="width: 33%;text-align: center">
+            <img src="img/source_picture/新手帮助.png" style="width:20px;height: 20px;">
+            <span style="color: #ffffff;font-size: 20px">新手必备</span>
+        </div>
+        <div style="width: 33%;text-align: center">
+            <img src="img/source_picture/付款.png" style="width:20px;height: 20px;">
+            <span style="color: #ffffff;font-size: 20px">付款方式</span>
+        </div>
+        <div style="width: 33%;margin-top:44px;text-align: center">
+            <div><a href="#" style="color: #AAAAAA;font-size: 14px">关于宠物之家</a></div>
+            <div style="margin-top: 8px"><a href="#" style="color: #AAAAAA;font-size: 14px">开放平台</a></div>
+        </div>
+        <div style="width: 33%;margin-top:44px;text-align: center">
+            <div><a href="#" style="color: #AAAAAA;font-size: 14px">联系我们</a></div>
+        </div>
+        <div style="width: 33%;margin-top:44px;text-align: center">
+            <div><a href="#" style="color: #AAAAAA;font-size: 14px">隐私政策</a></div>
+            <div style="margin-top: 8px"><a href="#" style="color: #AAAAAA;font-size: 14px">法律声明</a></div>
+            <div style="margin-top: 8px"><a href="#" style="color: #AAAAAA;font-size: 14px">知识产权</a></div>
+        </div>
+    </div>
+    <div style="width: 100%;text-align: center;color: #D0D0D0;position: absolute;bottom: 2px;font-size: 12px">
+        @--&nbspPet&nbsp&nbspHouse.com&nbsp&nbsp版权所有
+    </div>
+</div>
+<!--辅助栏-->
+<div>
+    <a class="btn btn-default" href="personal.html" role="button"
+       style="position:fixed;right:50px;bottom:290px;background-color:#843900;color: #ffffff;border:0;font-size: 12px">
+        <img src="img/source_picture/个人.png" style="width: 15px;height: 15px;"><br>
+        我的
+    </a>
+    <a class="btn btn-default" href="buy.html" role="button"
+       style="position:fixed;right:50px;bottom:242px;background-color:#843900;color: #ffffff;border:0;font-size: 12px;width: 48px;height:45.78px; padding: 6px 0 ">
+        <img src="img/source_picture/购物车.png" style="width: 15px;height: 15px;"><br>
+        购物车
+    </a>
+    <a class="btn btn-default" href="#" role="button"
+       style="position:fixed;right:50px;bottom:194px;background-color:#843900;color: #ffffff;border:0;font-size: 12px">
+        <img src="img/source_picture/客服.png" style="width: 15px;height: 15px;"><br>
+        消息
+    </a>
+    <a class="btn btn-default" href="#" role="button"
+       style="position:fixed;right:50px;bottom:146px;background-color:#843900;color: #ffffff;border:0;font-size: 12px">
+        <img src="img/source_picture/收藏.png" style="width: 15px;height: 15px;"><br>
+        收藏
+    </a>
+    <a class="btn btn-default" href="#" role="button"
+       style="position:fixed;right:50px;bottom:98px;background-color:#843900;color: #ffffff;border:0;font-size: 12px">
+        <img src="img/source_picture/足迹.png" style="width: 15px;height: 15px;"><br>
+        足迹
+    </a>
+    <a class="btn btn-default" href="#" role="button"
+       style="position:fixed;right:50px;bottom:50px;background-color:#843900;color: #ffffff;border:0;font-size: 12px">
+        <img src="img/source_picture/顶部.png" style="width: 15px;height: 15px;"><br>
+        顶部
+    </a>
+</div>
+</body>
+</html>

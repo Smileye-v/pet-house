@@ -1,0 +1,164 @@
+body, p, a, input {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+}
+
+.main .cart-container table {
+    width: 100%;
+
+
+}
+
+.main .cart-container table tr {
+    text-align: center;
+
+}
+
+.border{
+    box-shadow: 0 0 12px 0 rgb(189,189,189);
+    border-radius: 12px;
+
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+tr:hover {
+    background: rgba(238, 238, 238, 0.2);
+}
+
+.main .cart-container table .table-header {
+    height: 40px;
+    background: #eaeaea;
+    font-size: 1.2em;
+}
+
+table tr th {
+    background: #eaeaea;
+
+}
+
+table tr:first-child th:first-child {
+    border-top-left-radius: 12px;
+
+}
+table tr:first-child th:last-child {
+    border-top-right-radius: 12px;
+
+}
+table tr:last-child td:first-child {
+    border-bottom-left-radius: 12px;
+
+}
+table tr:last-child td:last-child {
+    border-bottom-right-radius: 12px;
+
+}
+
+table tr th:first-child,table tr td:first-child {/*设置table左边边框*/
+    border-left: 2px solid #eaeaea;
+}
+table tr th:last-child,table tr td:last-child {/*设置table右边边框*/
+    border-right: 2px solid #eaeaea;
+}
+
+.main .cart-container table tr td:nth-child(1),
+.main .cart-container table tr td:nth-child(2) {
+    border-bottom: 2px solid #eaeaea;
+    text-align:center;
+
+}
+
+.main .cart-container table tr td:nth-child(2) {
+    border-bottom: 2px solid #eaeaea;
+    width: 52%;
+}
+
+.main .cart-container table tr td:nth-child(3) {
+    border-bottom: 2px solid #eaeaea;
+    width: 12%;
+}
+
+.main .cart-container table tr td:nth-child(4) {
+    border-bottom: 2px solid #eaeaea;
+    width: 12%;
+}
+
+.main .cart-container table tr td:nth-child(5) {
+    border-bottom: 2px solid #eaeaea;
+    width: 12%;
+}
+
+.main .cart-container table tr td:last-child {
+    border-bottom: 2px solid #eaeaea;
+    width: 10%;
+}
+
+.cart-good {
+
+    height: 60px;
+}
+
+.cart-good img {
+   float: left;
+    margin: 10px;
+    width: 60px;
+}
+
+.cart-good td p {
+    float: left;
+    margin: 30px 0;
+    text-align: center;
+}
+
+/*加、减按钮*/
+
+.cart-good td input[type='button'] {
+    width: 20px;
+    height: 20px;
+    background: rgba(177, 185, 187, 0.21);
+    outline: none;
+    border: none;
+}
+
+.cart-good td input[type='button']:disabled {
+    background: rgba(177, 185, 187, 0.21);
+}
+
+.cart-good td input[type='button']:first-child {
+    margin-right: -4px;
+}
+
+.cart-good td input[type='button']:last-child {
+    margin-left: -4px;
+}
+
+.cart-good td input[type='text'] {
+    width: 30px;
+    height: 20px;
+    outline: none;
+    border: none;
+    text-align: center;
+
+}
+
+.table-footer {
+    display: flex;
+    justify-content: space-between;
+    line-height: 45px;
+    height: 45px;
+    background-color: #eaeaea;
+}
+
+.table-footer div {
+    font-size: 1.2em;
+
+}
+
+.table-footer div button {
+
+    border: 0;
+    width: 120px;
+    height: 45px;
+    color: white;
+}

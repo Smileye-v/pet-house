@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link href="CSS/login.css" rel="stylesheet">
+    <script src="JS/register.js"></script>
+    <title>注册</title>
+</head>
+<style>
+    .from_item{
+        width: 350px;
+        height: 50px;
+    }
+    .code {
+        height: 50px;
+        margin-left:350px;
+        margin-top: -50px;
+    }
+
+    #myCanvas{
+        height:55px;
+    }
+
+    #alert{
+        font-size: 13px;
+        text-align: left;
+        color: #CC3300;
+        padding-bottom: 15px;
+    }
+</style>
+<body onload="start()">
+<div class="login_auto">
+    <div class="login_top">
+        <img _ngcontent-c2="" src="img/login/LOGO.png">
+        <p>用户注册</p>
+    </div>
+    <div class="clearfix ">
+            <output id="tips"></output>
+            <div _ngcontent-c1="" class="login-bg">
+                <div _ngcontent-c1="" class="login">
+                    <div _ngcontent-c1="" class="login_cont">
+                        <form method="post" action="controller/addUser.php" >
+                        <div _ngcontent-c1="" class="login_tab">
+                            <span _ngcontent-c1="" class="on">用户帐号注册</span>
+                        </div>
+                        <div id="alert"></div>
+                        <div class="from_item"><input  style="padding-left: 10px; margin-top: -15px;font-size:16px " class="from_item" id="code" type="text" placeholder="请输入图片验证码" required size="26" autocomplete="off">
+                            <div class="code">
+                                <canvas title="看不清，点我换一张" id="myCanvas" width="160px" height="50px">验证码</canvas>
+                            </div>
+                        </div>
+                        <div _ngcontent-c1="" class="login_line1">
+                                <input _ngcontent-c1="" name="username" id="number" placeholder="请输入手机号" type="text"
+                                       pattern="((\d{11})|^((\d{7,8})|(\d{4}|\d{3})-(\d{7,8})|(\d{4}|\d{3})-(\d{7,8})-(\d{4}|\d{3}|\d{2}|\d{1})|(\d{7,8})-(\d{4}|\d{3}|\d{2}|\d{1}))$)"
+                                       size="24" autocomplete="off" maxlength="11" oninvalid="setCustomValidity('不是移动号码');"oninput="setCustomValidity('');" required/>
+                            <input type="button" id="qw" value="免费获取验证码" onclick="sendemail()"/></div>
+                        <div _ngcontent-c1="" class="login_line">
+                            <input _ngcontent-c1="" autocomplete="off"  maxlength="4" placeholder="请输入手机验证码"
+                                   type="text"
+                                   id="massage" class="ng-untouched ng-pristine ng-valid" size="26"
+                                   class="form-item-center"
+                                   pattern="[0-9]{4}" required oninvalid="setCustomValidity('不是正确的验证码');"
+                                   oninput="setCustomValidity('');"></div>
+                        <div _ngcontent-c1="" class="login_line">
+                        <input _ngcontent-c1="" name="password" id="password" type="password"
+                               class="ng-untouched ng-pristine ng-valid center" placeholder="请输入6-10位登陆密码"
+                               pattern='(^[a-zA-Z0-9]{6,10}$)'
+                               oninvalid="setCustomValidity('不是正确的密码');"
+                               oninput="setCustomValidity('');" required size="34" autocomplete="off">
+                        <span class="ed color" id="passMode">***</span>
+                    </div>
+                        <input type="checkbox" name="agree" style="margin-left:-250px;display:inline-block;" value="1"/>
+                        <span style="font-size:10px;color: #843900;">我已阅读并同意《用户注册协议》</span>
+                        <br/>
+                        <button _ngcontent-c1="" class="login_btn1" class="btn btn-lg btn-primary btn-block"
+                                type="submit" value="Submit" onClick="return pass()">注 册
+                        </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+    </div>
+</div>
+<!--页脚-->
+<div style=" background-color:#3f3f3f;height:300px;display: flex;align-items: center;justify-content: space-between;position: relative">
+    <div style="width:100%;height:1px;background-color:#C0C0C0;position: absolute;bottom: 20px;"></div>
+    <div class="container" style="display: flex;flex-direction: row;flex-wrap:wrap;margin-bottom:20px">
+        <div style="width: 33%;text-align: center">
+            <img src="img/source_picture/付款.png" style="width:20px;height: 20px;">
+            <span style="color: #ffffff;font-size: 20px">消费者保障</span>
+        </div>
+        <div style="width: 33%;text-align: center">
+            <img src="img/source_picture/新手帮助.png" style="width:20px;height: 20px;">
+            <span style="color: #ffffff;font-size: 20px">新手必备</span>
+        </div>
+        <div style="width: 33%;text-align: center">
+            <img src="img/source_picture/保障.png" style="width:20px;height: 20px;">
+            <span style="color: #ffffff;font-size: 20px">付款方式</span>
+        </div>
+        <div style="width: 33%;margin-top:44px;text-align: center">
+            <div><a href="#" style="color: #AAAAAA;font-size: 14px">关于宠物之家</a></div>
+            <div style="margin-top: 8px"><a href="#" style="color: #AAAAAA;font-size: 14px">开放平台</a></div>
+        </div>
+        <div style="width: 33%;margin-top:44px;text-align: center">
+            <div><a href="#" style="color: #AAAAAA;font-size: 14px">联系我们</a></div>
+        </div>
+        <div style="width: 33%;margin-top:44px;text-align: center">
+            <div><a href="#" style="color: #AAAAAA;font-size: 14px">隐私政策</a></div>
+            <div style="margin-top: 8px"><a href="#" style="color: #AAAAAA;font-size: 14px">法律声明</a></div>
+            <div style="margin-top: 8px"><a href="#" style="color: #AAAAAA;font-size: 14px">知识产权</a></div>
+        </div>
+    </div>
+    <div style="width: 100%;text-align: center;color: #D0D0D0;position: absolute;bottom: 2px;font-size: 12px">
+        @--&nbspPet&nbsp&nbspHouse.com&nbsp&nbsp版权所有
+    </div>
+</div>
+</body>
+<script type="text/javascript">
+    var canvas = document.getElementsByTagName("canvas");
+    var _canvas = canvas[0].getContext("2d");
+    var return_str = "";
+    var _ifstart = false;
+    var _B_x = 0;
+    var _B_y = 0;
+    var alertDom = document.getElementById('alert');
+    document.getElementById('myCanvas').onclick = chang_canvas;
+
+    function pass() {
+        var _val = document.getElementById("code").value;
+        if (_val == return_str) {
+            alertDom.innerText = '验证成功';
+        } else {
+            alertDom.innerText = '验证失败，请重新输入';
+            document.getElementById("code").focus();
+            return false;
+        }
+    }
+
+    function start() {
+        try {
+            function draw_screen() {
+                _canvas.fillStyle = "#5CADAD";
+                _canvas.fillRect(0, 0, 90, 45);
+                _canvas.strokeStyle = "white";
+            }
+
+            function write_text(_str) {
+                _canvas.fillStyle = "white";
+                _canvas.font = "20px _sans";
+                _canvas.textBaseline = "top";
+                _canvas.fillText(_str, 20, 10);
+            }
+
+            function get_abc() {
+                var _str = 'a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,0,1,2,3,4,5,6,7,8,9';
+                var _str_array = _str.split(",");
+                return_str = "";
+                for (i = 0; i < 4; i++) {
+                    var _rnd = Math.floor(Math.random() * _str_array.length);
+                    return_str += _str_array[_rnd];
+                }
+                return return_str;
+            }
+
+            draw_screen();
+            get_abc();
+            write_text(return_str);
+        } catch (e) {
+            alert(e);
+        }
+        for (var i = 0; i < 4; i++) {
+            _canvas.strokeStyle = "white";
+            _canvas.beginPath();
+            _canvas.moveTo(lineX(), lineY());
+            _canvas.lineTo(lineX(), lineY());
+            _canvas.lineWidth = 3;
+            _canvas.stroke();
+        }
+        for (var j = 0; j < 3; j++) {
+            _canvas.fillStyle = "white";
+            _canvas.beginPath();
+            _canvas.arc(lineX(), lineY(), 1, 0, 2 * Math.PI);
+            _canvas.fill();
+        }
+
+    }
+
+    function chang_canvas() {
+        start();
+    }
+
+    function lineX() {
+        //坐标值在width之内
+        var ranLineX = Math.floor(Math.random() * 90);
+        return ranLineX;
+    }
+
+    //干扰线的随机y坐标值
+    function lineY() {
+        //坐标值在height之内
+        var ranLineY = Math.floor(Math.random() * 50);
+        return ranLineY;
+    }
+
+    function changeMode(e) {
+        passMode = !passMode;
+        if (passMode) {
+            e.target.innerText = "...";
+            passwordDom.setAttribute('type', 'password')
+        } else {
+            e.target.innerText = "abc";
+            passwordDom.setAttribute('type', 'text')
+        }
+    }
+
+    window.onload = function () {
+        start()
+        passModeDom = document.getElementById('passMode').onclick = changeMode;
+        passwordDom = document.getElementById('password');
+
+    }
+</script>
+
+</html>

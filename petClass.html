@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Pet House课堂</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src="JS/Health.js"></script>
+    <style>
+        .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
+            color: #ffffff;
+            background-color: #843900;
+        }
+
+        .navbar-default .navbar-nav > li > a {
+            color: #843900;
+        }
+
+        .navbar-default {
+            background-color: #ffffff;
+            border-color: #843900;
+        }
+
+        .img1 {
+            background-image: url("img/class_Pro/1.11.png");
+            width: 100px;
+            height: 100px;
+        }
+
+        .img1:hover {
+            background-image: url("img/class_Pro/1.png");
+            width: 100px;
+            height: 100px;
+        }
+
+        .img2 {
+            background-image: url("img/class_Pro/2.2.png");
+            width: 100px;
+            height: 100px;
+        }
+
+        .img2:hover {
+            background-image: url("img/class_Pro/2.png");
+            width: 100px;
+            height: 100px;
+        }
+
+        .img3 {
+            background-image: url("img/class_Pro/3.3.png");
+            width: 100px;
+            height: 100px;
+        }
+
+        .img3:hover {
+            background-image: url("img/class_Pro/3.png");
+            width: 100px;
+            height: 100px;
+        }
+
+        .img4 {
+            background-image: url("img/class_Pro/4.4.png");
+            width: 100px;
+            height: 100px;
+        }
+
+        .img4:hover {
+            background-image: url("img/class_Pro/4.png");
+            width: 100px;
+            height: 100px;
+        }
+
+        .img5 {
+            background-image: url("img/class_Pro/5.5.png");
+            width: 100px;
+            height: 100px;
+        }
+
+        .img5:hover {
+            background-image: url("img/class_Pro/5.png");
+            width: 100px;
+            height: 100px;
+        }
+
+        .img6 {
+            background-image: url("img/class_Pro/6.6.png");
+            width: 100px;
+            height: 100px;
+        }
+
+        .img6:hover {
+            background-image: url("img/class_Pro/6.png");
+            width: 100px;
+            height: 100px;
+        }
+
+        .img7 {
+            background-image: url("img/class_Pro/7.7.png");
+            width: 100px;
+            height: 100px;
+        }
+
+        .img7:hover {
+            background-image: url("img/class_Pro/7.png");
+            width: 100px;
+            height: 100px;
+        }
+
+    </style>
+</head>
+<body>
+<!--导航栏-->
+<!--小-->
+
+<div style="background-color:#f5f5f5;">
+    <div class="container" style="height: 30px;display: flex;justify-content: space-between">
+        <!--左边-->
+        <div style="width: 40%;display: flex;justify-content: flex-start">
+            <ul class="nav nav-tabs" style=" height: 30px;">
+                <li><a href="home.html"
+                       style="font-size: 13px;color: #843900;display: flex;align-items: center;height: 30px;border: 0;">Pet
+                    House首页 </a></li>
+                <li><a href="login.html" style="font-size: 13px;color: #843900;display: flex;align-items: center;height: 30px;border: 0;margin-left: 15px;margin-right:-10px">请登录/</a></li>
+                <li><a href="login.html" style="font-size: 13px;color: #843900;display: flex;align-items: center;height: 30px;border: 0;margin-left: -15px">注册</a></li>
+                </ul>
+                </div>
+                <!--右边-->
+                <div style="width: 60%;display: flex;justify-content: flex-end">
+                    <ul class="nav nav-tabs" style="height: 30px;display: flex;align-items: center;font-size: 13px;">
+                        <li><a href="orders.html"
+                               style="color: #843900;height: 30px;border: 0;display: flex;align-items: center;">我的订单</a></li>
+                        <li><a href="buy.html" style="color: #843900;height: 30px;border: 0;display: flex;align-items: center;"><img
+                                        src="img/source_picture/购物车2.png"
+                                        style="width: 15px;height: 15px;display: flex;align-items: center;margin-right: 5px">购物车</a>
+                        </li>
+                        <li><a href="personal.html"
+                               style="color: #843900;height: 30px;border: 0;display: flex;align-items: center;">个人中心</a></li>
+                        <li><a href="#"
+                               style="color: #843900;height: 30px;border: 0;display: flex;align-items: center;">问题反馈</a></li>
+                    </ul>
+                
+
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <nav class="container  navbar navbar-default" role="navigation" style="margin-top: 15px;line-height: 71px">
+        <div class="navbar-header" style="width:20%;">
+            <a href="#">
+                <img src="img/class_Pro/petlogo.png" style="width: 192px;">
+            </a>
+        </div>
+        <ul class="nav nav-tabs" role="tablist" style="border: 0;">
+            <li><a class="tab_a" role="tab" data-toggle="tab" href="#dogHost"
+                   style="font-size: 20px;background-color:#843900;color: white;height: 70px;display: flex;align-items: center;">幼犬主人</a></li>
+            <li><a class="tab_a" role="tab" data-toggle="tab" href="#catHost"
+                   style="font-size: 20px;color: #843900;height: 70px;display: flex;align-items: center;">幼猫主人</a></li>
+            <li><a class="tab_a" role="tab" data-toggle="tab" href="#dogHealth"
+                   style="font-size: 20px; color: #843900;height: 70px;display: flex;align-items: center;">犬健康</a></li>
+            <li><a class="tab_a" role="tab" data-toggle="tab" href="#catHealth"
+                   style="font-size: 20px; color: #843900;height: 70px;display: flex;align-items: center;">猫健康</a></li>
+        </ul>
+    </nav>
+
+    <div class="tab-content" style="">
+        <div class="tab-pane active" id="dogHost">
+            <h1 style="color: #843900">幼犬主人</h1>
+
+            <div class="row">
+                <img src="img/class_Pro/777.jpg" alt="Cinque Terre" width="1170" height="308"></div>
+            <div class="row" style="margin-top: 10px;">
+                <div class="col-md-1 ">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2" style="background-color: #843900; ">
+                            <h1 style="color: white;line-height: 50px;">迎接幼犬的到来</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h2 style="color: #843900">生活习性</h2>
+                    <p class="lead">你的幼犬刚抵达一个全新的环境，需要认识新的家庭成员、家中其他宠物，请不要激动的兴高采烈，尽量让他自己在感觉舒适的状况里探索，选择他感到舒服的空间。</p>
+                </div>
+                <div class="col-md-6 col-md-offset-1">
+                    <img src="img/class_Pro/dog2.jpg" alt="Cinque Terre" width="900" height="453"></div>
+            </div>
+            <div class="row" style="margin-top: 10px;">
+                <h2 style="color: #843900;margin-left: 20px;">如何准备幼犬的日常活动空间呢？</h2>
+            </div>
+            <div class="row" style="margin-top: 10px;">
+                <div class="col-md-2 col-md-offset-1 " style="margin-top: 20px;">
+                    <div style="margin-left: 22px;">
+                        <div class="img5"></div>
+                    </div>
+                    <h3 style="margin-left: 45px;">睡窝</h3>
+                    <p class="lead">加上舒适柔软的床垫，能让幼犬感到安全。第一个晚上，你可以在他窝内放有一点狗妈妈气味的碎布。</p>
+                </div>
+                <div class="col-md-2" style="margin-top: 20px;">
+                    <div style="margin-left: 22px;">
+                        <div class="img1"></div>
+                    </div>
+                    <h3 style="margin-left: 45px;">牵绳</h3>
+                    <p class="lead">让他从小就习惯，教他走在你的身边。</p>
+                </div>
+                <div class="col-md-2" style="margin-top: 20px;">
+                    <div style="margin-left: 22px;">
+                        <div class="img2"></div>
+                    </div>
+                    <h3 style="margin-left: 45px;">玩具</h3>
+                    <p class="lead">让幼犬不会咬你的家具或你的东西。你可以买一些玩具来让他咬。如果你给他一根骨头，请不要让他无人看管，避免发生危险</p>
+                </div>
+                <div class="col-md-2" style="margin-top: 20px;">
+                    <div style="margin-left: 22px;">
+                        <div class="img3"></div>
+                    </div>
+                    <h3 style="margin-left: 15px;">两个喂食碗</h3>
+                    <p class="lead">一个用于犬粮和一个更大的碗来放置饮用水。</p>
+                </div>
+                <div class="col-md-2" style="margin-top: 20px;">
+                    <div style="margin-left: 22px;">
+                        <div class="img4"></div>
+                    </div>
+                    <h3 style="margin-left: 35px;">狗名牌</h3>
+                    <p class="lead">你的幼犬项圈上需要一个带有你的名字和电话号码信息的名牌。(当你的狗走失时将十分管用)。</p>
+                </div>
+                <div class="col-md-10 col-md-offset-2"></div>
+                <div class="col-md-5  " style="margin-top: 60px;">
+                    <p class="lead">
+                        当幼犬抵达家中时，可以先把他放在客厅或厨房中安静的角落，这个安全的空间能让他开始熟悉环境并展开探索，慢慢熟悉屋里其他成员、各种声音与气味；一段时间后，他会开始发现所有他可以进入的地方，并且习惯每个人的来来去去。</p>
+                </div>
+                <div class="col-md-5 ">
+                    <img src="img/class_Pro/home.png" alt="Cinque Terre" width="595" height="205">
+                </div>
+            </div>
+            <div class="row" style="margin-top: 20px;">
+                <div class="col-md-1 ">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2" style="background-color: #843900; ">
+                            <h1 style="color: white;line-height: 50px;">关于幼犬的饮食</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-md-offset-1" style="margin-top: 40px;">
+                    <img src="img/class_Pro/cathouse.c2a027b1.png" alt="Cinque Terre" width="138" height="208">
+                </div>
+                <div class="col-md-5 col-md-offset-1">
+                    <img src="img/class_Pro/dog11.jpg" alt="Cinque Terre" width="410" height="283">
+                </div>
+                <div class="col-md-4 ">
+                    <img src="img/class_Pro/dog22.jpg" alt="Cinque Terre" width="410" height="283">
+                </div>
+                <div class="col-md-5 col-md-offset-2" style="margin-left: 50px;">
+                    <img src="img/class_Pro/petsbowl.39d2fc06.png" alt="Cinque Terre" width="130" height="83">
+                </div>
+                <div class="col-md-4  col-md-offset-2">
+                    <img src="img/class_Pro/dog33.jpg" alt="Cinque Terre" width="410" height="283">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="tab-pane " id="catHost">
+            <h1 style="color: #843900">幼猫主人</h1>
+            <div class="row">
+                <img src="img/class_Pro/cat.jpg" alt="Cinque Terre" width="1170" height="308"></div>
+            <div class="row" style="margin-top: 10px;">
+                <div class="col-md-1 ">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2" style="background-color: #843900; ">
+                            <h1 style="color: white;line-height: 50px;">迎接幼猫的到来</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h2 style="color: #843900">生活习性</h2>
+                    <p class="lead">你的幼猫刚抵达一个全新的环境，需要认识新的家庭成员、家中其他宠物，虽然这让人迫不及待想为她举办热闹的欢迎会，但千万别真的这么做，这会吓到还在熟悉环境的幼猫呦！</p>
+                </div>
+                <div class="col-md-6 col-md-offset-2">
+                    <img src="img/class_Pro/cat3.jpg" alt="Cinque Terre" width="802" height="350"></div>
+            </div>
+            <div class="row ">
+                <h2 style="color: #843900;margin-left: 20px;">如何准备幼猫的日常活动空间呢？</h2>
+            </div>
+            <div class="row" style="margin-top: 10px;">
+                <div class="col-md-3 " style="margin-top: 20px;">
+                    <div style="margin-left: 75px;">
+                        <div class="img5"></div>
+                    </div>
+                    <h3 style="margin-left: 100px;">猫窝</h3>
+                    <p class="lead">加上舒适柔软的床垫，能让幼猫感到安全。</p>
+                </div>
+                <div class="col-md-3" style="margin-top: 20px;">
+                    <div style="margin-left: 75px;">
+                        <div class="img6"></div>
+                    </div>
+                    <h3 style="margin-left: 85px;">猫砂盆</h3>
+                    <p class="lead">选择一个合适的尺寸，最好能有盖子来限制气味扩散。</p>
+                </div>
+                <div class="col-md-3" style="margin-top: 20px;">
+                    <div style="margin-left: 75px;">
+                        <div class="img1"></div>
+                    </div>
+                    <h3 style="margin-left: 65px;">两个喂食碗</h3>
+                    <p class="lead">一个用于猫粮（一只体重3-4kg的成猫每天大约吃50-60g）和一个更大的碗来放置饮用水。</p>
+                </div>
+                <div class="col-md-3" style="margin-top: 20px;">
+                    <div style="margin-left: 75px;">
+                        <div class="img7"></div>
+                    </div>
+                    <h3 style="margin-left: 70px;">猫抓柱/板</h3>
+                    <p class="lead">这是相当有用的用品！能作为游戏的道具，并减少幼猫伤害家具的机率。</p>
+                </div>
+                <div class="col-md-5" style="margin-top: 70px;">
+                    <p class="lead">
+                        幼猫抵达家中时，可以先把她放在客厅或厨房中安静的角落，这个安全的空间能让她开始熟悉环境并展开探索，慢慢熟悉屋里其他成员、各种声音与气味。除此之外，你也会发现她时常坐在你的家具、橱柜之上，这是很正常的，猫咪喜欢高高在上的感觉!</p>
+                </div>
+                <div class="col-md-5 " style="margin-left: 20px;">
+                    <img src="img/class_Pro/home.png" alt="Cinque Terre" width="595" height="205">
+                </div>
+            </div>
+            <div class="row" style="margin-top: 20px;">
+                <div class="col-md-1 ">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2" style="background-color: #843900; ">
+                            <h1 style="color: white;line-height: 50px;">关于幼猫的饮食</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-md-offset-1" style="margin-top: 40px;">
+                    <img src="img/class_Pro/cathouse.c2a027b1.png" alt="Cinque Terre" width="138" height="208">
+                </div>
+                <div class="col-md-5 col-md-offset-1">
+                    <img src="img/class_Pro/cat111.jpg" alt="Cinque Terre" width="410" height="283">
+                </div>
+                <div class="col-md-4 ">
+                    <img src="img/class_Pro/cat22.jpg" alt="Cinque Terre" width="410" height="283">
+                </div>
+                <div class="col-md-5 col-md-offset-2" style="margin-left: 50px;">
+                    <img src="img/class_Pro/petsbowl.39d2fc06.png" alt="Cinque Terre" width="130" height="83">
+                </div>
+                <div class="col-md-4  col-md-offset-2">
+                    <img src="img/class_Pro/cat33.jpg" alt="Cinque Terre" width="410" height="283">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="tab-pane" id="dogHealth">
+            <h1 style="color: #843900">犬健康</h1>
+            <div class="row">
+                <img src="img/class_Pro/catHealth.jpg" alt="Cinque Terre" width="1170" height="308"></div>
+            <div style="text-align: center;margin-top: 20px;display: flex;justify-content: space-between;width: 1140px; ">
+
+            <span class="table" href="#d11"
+                  style="background-color: #843900;display: inline-block; margin-right: 10px;color: white;line-height: 60px;font-size: 20px;width: 300px;">健康问题</span>
+                <span class="table" href="#d22"
+                      style=" background-color: #999999;display: inline-block; margin-left: 30px;line-height: 60px;color: white;font-size: 20px;width: 300px;">皮肤问题</span>
+                <span class="table" href="#d33"
+                      style="background-color: #999999;display: inline-block;margin-left: 30px;line-height: 60px;color: white;font-size: 20px;width: 300px;">泌尿问题</span>
+
+            </div>
+            <div class="container tableContent" id="d11" style="width: 1140px;margin-right: 20px;">
+                <div style="margin-top: 40px;">
+                    <h3 style="color: #843900">狗狗每年要打什么针？</h3>
+                    <p class="lead" style="display:inline-block;  margin-top: 10px;font-size: 18px;text-indent: 2em;">
+                        狗狗的针，一针是狂犬疫苗,一针是4联、6联或8联疫苗(用于预防各种传染性疾病）。</p></div>
+
+                <div style="margin-top: 30px;">
+                    <h3 style="color: #843900">疫苗多久打一次?</h3>
+                    <p class="lead" style="display:inline-block;  margin-top: 10px;font-size: 18px;text-indent: 2em;">
+                        第一年需要接种三次疫苗，每15-21天接种一次，从第二年起每年只需要接种一次。</p></div>
+
+                <div style="margin-top: 30px;">
+                    <h3 style="color: #843900">狗狗什么时候打疫苗?</h3>
+                    <p class="lead" style="display:inline-block;  margin-top: 10px; font-size: 18px;text-indent: 2em;">
+                        一般建议45天大的时候开始接种第一针疫苗呢, 疫苗有三针,每针间隔15-21天, 以后每年一针巩固。</p>
+                </div>
+
+                <div style="margin-top: 30px;">
+                    <h3 style="color: #843900">狗要打几次疫苗？</h3>
+                    <p class="lead" style="display:inline-block;  margin-top: 10px;font-size: 18px;text-indent: 2em;">
+                        一般建议45天大的时候开始接种第一针疫苗呢, 疫苗有三针,每针间隔15-21天, 以后每年一针巩固。</p></div>
+
+                <div style="margin-top: 30px;">
+                    <h3 style="color: #843900">狗狂犬疫苗怎么打？</h3>
+                    <p class="lead" style="display:inline-block;  margin-top: 10px;font-size: 18px;text-indent: 2em;">
+                        狗狗的狂犬疫苗需要一年打一次，可去宠物医院进行接种。</p></div>
+
+
+                <div style="margin-top: 30px;">
+                    <h3 style="color: #843900">狗每年都要打疫苗吗？</h3>
+                    <p class="lead" style="display:inline-block;  margin-top: 10px;font-size: 18px;text-indent: 2em;">
+                        是的，狗狗每年都需要接种一次疫苗，加强疫苗的免疫效果，因为疫苗在体内的作用时间是有一个期限的。</p></div>
+
+
+                <div style="margin-top: 30px;">
+                    <h3 style="color: #843900">宠物店可以打疫苗吗？</h3>
+                    <p class="lead" style="display:inline-block;  margin-top: 10px;font-size: 18px;text-indent: 2em;">
+                        宠物店是没有接种疫苗的资质的，不能去打噢，建议去宠物医院接种疫苗。</p></div>
+
+
+                <div style="margin-top: 30px;">
+                    <h3 style="color: #843900">宠物疾病与日常健康？</h3>
+                    <p class="lead" style="display:inline-block;  margin-top: 10px;font-size: 18px;text-indent: 2em;">
+                        随着人们生活水平的提高．越来越多的人们喜欢养宠物，甚至把宠物当作家庭成员一样对待。但是大多数人缺乏一定的宠物饲养知识．很少注意宠物的日常保健。</p></div>
+
+                <div style="margin-top: 30px;">
+                    <h3 style="color: #843900">狗狗日常健康检查？</h3>
+                    <p class="lead" style="display:inline-block;  margin-top: 10px;font-size: 18px;text-indent: 2em;">
+                        狗狗日常检查通常包括体表外观检查、心率血压体温检查、血常规检查、粪便镜检和尿液检查呢。</p></div>
+
+                <div style="margin-top: 30px;">
+                    <h3 style="color: #843900">宠物健康食品？</h3>
+                    <p class="lead" style="display:inline-block;  margin-top: 10px;font-size: 18px;text-indent: 2em;">
+                        猫咪狗狗主食还是要吃猫粮狗粮，因为猫粮狗粮营养均衡全面，适合猫狗的所需营养，保证猫咪狗狗营养全面。</p></div>
+
+                <div style="margin-top: 30px;">
+                    <h3 style="color: #843900">体检多少钱一次？</h3>
+                    <p class="lead" style="display:inline-block;  margin-top: 10px;font-size: 18px;text-indent: 2em;">
+                        狗狗和猫咪的体检的项目不同，其价格通常会有差异，相对普遍的体检，价格在300-800之间。</p></div>
+
+                <div style="margin-top: 30px;">
+                    <h3 style="color: #843900">体检项目和费用？</h3>
+                    <p class="lead" style="display:inline-block;  margin-top: 10px;font-size: 18px;text-indent: 2em;">
+                        狗狗和猫咪的体检套餐常包括有：耳检 便检 口腔、眼睑、生殖器、肛门腺检查，脏器听诊，体表触诊，血常规 体温 体重测量。</p></div>
+
+                <div style="margin-top: 30px;">
+                    <h3 style="color: #843900">宠物体检有什么用？</h3>
+                    <p class="lead" style="display:inline-block;  margin-top: 10px;font-size: 18px;text-indent: 2em;">
+                        可以去宠物医院进行体检，我们可以从体检报告中了解到它们的变化，提示你该如何为宠物调整饮食、环境、生活作息和采取特殊护理措施等，对致命疾病具有非常重要的预警和防控作用。在微宠医APP主页，可查找附近动物医院在线预约体检。</p>
+                </div>
+
+                <div style="margin-top: 30px;">
+                    <h3 style="color: #843900">体检多少钱一次？</h3>
+                    <p class="lead" style="display:inline-block;  margin-top: 10px;font-size: 18px;text-indent: 2em;">
+                        作为一名合格的铲屎官，我们一定要知道平常猫猫和狗狗是怎样的状态，并且要留意它们的变化。一个很好的方式是定期去动物医院为它进行体检。根据检查项目不同，医院收费不同，费用会有所不同。</p>
+                </div>
+            </div>
+            <div class="container tableContent " id="d22" style="display: none;margin-top: 40px; ">
+                <img src="img/class_Pro/cat2.png" alt="Cinque Terre" width="1170">
+                <img src="img/class_Pro/cat4.png" alt="Cinque Terre" width="1170">
+            </div>
+            <div class="container tableContent" id="d33" style="display: none;margin-top: 40px;">
+                <img src="img/class_Pro/cat5.png" alt="Cinque Terre" width="1170">
+            </div>
+
+        </div>
+
+        <div class="tab-pane" id="catHealth">
+            <h1 style="color: #843900">猫健康</h1>
+            <div class="row">
+                <img src="img/class_Pro/catHealth.jpg" alt="Cinque Terre" width="1170" height="308"></div>
+            <div style="text-align: center;margin-top: 20px;display: flex;justify-content: space-between;width: 1140px; ">
+
+            <span class="tabs" href="#d1"
+                  style="background-color: #843900;display: inline-block; margin-right: 10px;color: white;line-height: 60px;font-size: 20px;width: 300px;">健康问题</span>
+                <span class="tabs" href="#d2"
+                      style=" background-color: #999999;display: inline-block; margin-left: 30px;line-height: 60px;color: white;font-size: 20px;width: 300px;">皮肤问题</span>
+                <span class="tabs" href="#d3"
+                      style="background-color: #999999;display: inline-block;margin-left: 30px;line-height: 60px;color: white;font-size: 20px;width: 300px;">泌尿问题</span>
+
+            </div>
+            <div class="container tabsContent" id="d1" style="width: 1140px;margin-right: 20px;">
+                <div style="margin-top: 40px;">
+                    <h3 style="color: #843900">小猫什么时候打疫苗?</h3>
+                    <p class="lead" style="display:inline-block;  margin-top: 10px;font-size: 18px;text-indent: 2em;">
+                        猫咪出生后七到八周开始打疫苗,建议2个月大开始打，每年需加强一次，这样才能让疫苗能够持续作用。</p></div>
+
+                <div style="margin-top: 30px;">
+                    <h3 style="color: #843900">猫咪的疫苗包含哪几种呢?</h3>
+                    <p class="lead" style="display:inline-block;  margin-top: 10px;font-size: 18px;text-indent: 2em;">
+                        猫咪疫苗目前常见的有三合一疫苗(猫三联)与五合一疫苗(猫五联)，另外每年需注射狂犬疫苗一次。</p></div>
+
+                <div style="margin-top: 30px;">
+                    <h3 style="color: #843900">疫苗多久打一次?</h3>
+                    <p class="lead" style="display:inline-block;  margin-top: 10px; font-size: 18px;text-indent: 2em;">
+                        第一年需要接种三次疫苗，每15-21天接种一次，从第二年起每年只需要接种一次。</p>
+                </div>
+
+                <div style="margin-top: 30px;">
+                    <h3 style="color: #843900">宠物店可以打疫苗吗？</h3>
+                    <p class="lead" style="display:inline-block;  margin-top: 10px;font-size: 18px;text-indent: 2em;">
+                        宠物店是没有接种疫苗的资质的，不能去打噢，建议去宠物医院接种疫苗。</p></div>
+
+                <div style="margin-top: 30px;">
+                    <h3 style="color: #843900">宠物疾病与日常健康？</h3>
+                    <p class="lead" style="display:inline-block;  margin-top: 10px;font-size: 18px;text-indent: 2em;">
+                        随着人们生活水平的提高．越来越多的人们喜欢养宠物，甚至把宠物当作家庭成员一样对待。但是大多数人缺乏一定的宠物饲养知识．很少注意宠物的日常保健。</p></div>
+
+
+                <div style="margin-top: 30px;">
+                    <h3 style="color: #843900">猫咪健康指南？</h3>
+                    <p class="lead" style="display:inline-block;  margin-top: 10px;font-size: 18px;text-indent: 2em;">
+                        对于猫的健康来说，健康护理是很重要的，简而言之，健康护理意味着定期和及时的检查，以保证猫咪的健康和良好的状态。我们应该多久给猫咪来一次保健护理？这取决于您的猫的年龄，生活方式和整体健康状况。</p>
+                </div>
+
+
+                <div style="margin-top: 30px;">
+                    <h3 style="color: #843900">宠物健康食品？</h3>
+                    <p class="lead" style="display:inline-block;  margin-top: 10px;font-size: 18px;text-indent: 2em;">
+                        猫咪狗狗主食还是要吃猫粮狗粮，因为猫粮狗粮营养均衡全面，适合猫狗的所需营养，保证猫咪狗狗营养全面。</p></div>
+
+
+                <div style="margin-top: 30px;">
+                    <h3 style="color: #843900">猫咪体检？</h3>
+                    <p class="lead" style="display:inline-block;  margin-top: 10px;font-size: 18px;text-indent: 2em;">
+                        猫日常检查通常包括体表外观检查、心率血压体温检查、血常规检查、粪便镜检和尿液检查。</p></div>
+
+                <div style="margin-top: 30px;">
+                    <h3 style="color: #843900">体检多少钱一次？</h3>
+                    <p class="lead" style="display:inline-block;  margin-top: 10px;font-size: 18px;text-indent: 2em;">
+                        狗狗和猫咪的体检的项目不同，其价格通常会有差异，相对普遍的体检，价格在300-800之间。</p></div>
+
+                <div style="margin-top: 30px;">
+                    <h3 style="color: #843900">体检项目和费用？</h3>
+                    <p class="lead" style="display:inline-block;  margin-top: 10px;font-size: 18px;text-indent: 2em;">
+                        狗狗和猫咪的体检套餐常包括有：耳检 便检 口腔、眼睑、生殖器、肛门腺检查，脏器听诊，体表触诊，血常规 体温 体重测量。</p></div>
+
+                <div style="margin-top: 30px;">
+                    <h3 style="color: #843900">宠物体检有什么用？</h3>
+                    <p class="lead" style="display:inline-block;  margin-top: 10px;font-size: 18px;text-indent: 2em;">
+                        可以去宠物医院进行体检，我们可以从体检报告中了解到它们的变化，提示你该如何为宠物调整饮食、环境、生活作息和采取特殊护理措施等，对致命疾病具有非常重要的预警和防控作用。在微宠医APP主页，可查找附近动物医院在线预约体检。</p>
+                </div>
+
+                <div style="margin-top: 30px;">
+                    <h3 style="color: #843900">体检多少钱一次？</h3>
+                    <p class="lead" style="display:inline-block;  margin-top: 10px;font-size: 18px;text-indent: 2em;">
+                        作为一名合格的铲屎官，我们一定要知道平常猫猫和狗狗是怎样的状态，并且要留意它们的变化。一个很好的方式是定期去动物医院为它进行体检。根据检查项目不同，医院收费不同，费用会有所不同。</p>
+                </div>
+            </div>
+            <div class="container tabsContent " id="d2" style="display: none;margin-top: 40px; ">
+                <img src="img/class_Pro/cat2.png" alt="Cinque Terre" width="1170">
+                <img src="img/class_Pro/cat4.png" alt="Cinque Terre" width="1170">
+            </div>
+            <div class="container tabsContent" id="d3" style="display: none;margin-top: 40px;">
+                <img src="img/class_Pro/cat5.png" alt="Cinque Terre" width="1170">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--页脚-->
+<div style=" background-color:#3f3f3f;height:300px;margin-top:200px;display: flex;align-items: center;justify-content: space-between;position: absolute;width: 100%">
+    <div style="width:100%;height:1px;background-color:#C0C0C0;position: absolute;bottom: 20px;"></div>
+    <div class="container" style="display: flex;flex-direction: row;flex-wrap:wrap;margin-bottom:20px">
+        <div style="width: 33%;text-align: center">
+            <img src="img/source_picture/保障.png" style="width:20px;height: 20px;">
+            <span style="color: #ffffff;font-size: 20px">消费者保障</span>
+        </div>
+        <div style="width: 33%;text-align: center">
+            <img src="img/source_picture/新手帮助.png" style="width:20px;height: 20px;">
+            <span style="color: #ffffff;font-size: 20px">新手必备</span>
+        </div>
+        <div style="width: 33%;text-align: center">
+            <img src="img/source_picture/付款.png" style="width:20px;height: 20px;">
+            <span style="color: #ffffff;font-size: 20px">付款方式</span>
+        </div>
+        <div style="width: 33%;margin-top:44px;text-align: center">
+            <div><a href="#" style="color: #AAAAAA;font-size: 14px">关于宠物之家</a></div>
+            <div style="margin-top: 8px"><a href="#" style="color: #AAAAAA;font-size: 14px">开放平台</a></div>
+        </div>
+        <div style="width: 33%;margin-top:44px;text-align: center">
+            <div><a href="#" style="color: #AAAAAA;font-size: 14px">联系我们</a></div>
+        </div>
+        <div style="width: 33%;margin-top:44px;text-align: center">
+            <div><a href="#" style="color: #AAAAAA;font-size: 14px">隐私政策</a></div>
+            <div style="margin-top: 8px"><a href="#" style="color: #AAAAAA;font-size: 14px">法律声明</a></div>
+            <div style="margin-top: 8px"><a href="#" style="color: #AAAAAA;font-size: 14px">知识产权</a></div>
+        </div>
+    </div>
+    <div style="width: 100%;text-align: center;color: #D0D0D0;position: absolute;bottom: 2px;font-size: 12px">
+        @--&nbspPet&nbsp&nbspHouse.com&nbsp&nbsp版权所有
+    </div>
+</div>
+<!--辅助栏-->
+<div>
+    <a class="btn btn-default" href="personal.html" role="button"
+       style="position:fixed;right:50px;bottom:290px;background-color:#843900;color: #ffffff;border:0;font-size: 12px">
+        <img src="img/source_picture/个人.png" style="width: 15px;height: 15px;"><br>
+        我的
+    </a>
+    <a class="btn btn-default" href="buy.html" role="button"
+       style="position:fixed;right:50px;bottom:242px;background-color:#843900;color: #ffffff;border:0;font-size: 12px;width: 48px;height:45.78px; padding: 6px 0 ">
+        <img src="img/source_picture/购物车.png" style="width: 15px;height: 15px;"><br>
+        购物车
+    </a>
+    <a class="btn btn-default" href="#" role="button"
+       style="position:fixed;right:50px;bottom:194px;background-color:#843900;color: #ffffff;border:0;font-size: 12px">
+        <img src="img/source_picture/客服.png" style="width: 15px;height: 15px;"><br>
+        消息
+    </a>
+    <a class="btn btn-default" href="#" role="button"
+       style="position:fixed;right:50px;bottom:146px;background-color:#843900;color: #ffffff;border:0;font-size: 12px">
+        <img src="img/source_picture/收藏.png" style="width: 15px;height: 15px;"><br>
+        收藏
+    </a>
+    <a class="btn btn-default" href="#" role="button"
+       style="position:fixed;right:50px;bottom:98px;background-color:#843900;color: #ffffff;border:0;font-size: 12px">
+        <img src="img/source_picture/足迹.png" style="width: 15px;height: 15px;"><br>
+        足迹
+    </a>
+    <a class="btn btn-default" href="#" role="button"
+       style="position:fixed;right:50px;bottom:50px;background-color:#843900;color: #ffffff;border:0;font-size: 12px">
+        <img src="img/source_picture/顶部.png" style="width: 15px;height: 15px;"><br>
+        顶部
+    </a>
+</div>
+</body>
+</html>
